@@ -41,7 +41,7 @@ public class SwerveModule {
    * @param turningEncoderChannel The channels of the turning encoder.
    * @param driveMotorReversed Whether the drive motor is reversed.
    */
-  public SwerveModule(ModulePosition position, int driveMotorChannel, int turningMotorChannel, int turningEncoderChannel, boolean driveMotorReversed, double turningEncoderOffset) {
+  public SwerveModule(ModulePosition position, int driveMotorChannel, int turningMotorChannel, int turningEncoderChannel, boolean driveMotorReversed, double turningEncoderOffset, double turningEncoderMinVal, double turningEncoderMaxVal) {
     
     this.m_position = position; // Use position.name() to get the name of the position as a String
 
@@ -59,7 +59,7 @@ public class SwerveModule {
     // m_turningMotor.enableVoltageCompensation(12.6);
     m_turningMotor.setInverted(true);
 
-    m_turningEncoder = new AbsoluteEncoder(turningEncoderChannel, turningEncoderOffset);
+    m_turningEncoder = new AbsoluteEncoder(turningEncoderChannel, turningEncoderOffset, turningEncoderMinVal, turningEncoderMaxVal);
     
     Dash.add("Cancoder: " + m_position.name(), () -> m_turningEncoder.getAbsolutePositionDegrees());
     // Dash.add("Wheel Speed: " + m_position.name(), () -> m_driveEncoder.getVelocity()*ModuleConstants.kDriveEncoderVelocityConversionFactor);

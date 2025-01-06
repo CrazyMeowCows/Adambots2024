@@ -7,12 +7,9 @@
 
 package com.adambots.sensors;
 
-import com.ctre.phoenix6.hardware.CANcoder;
-
 import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.util.Units;
 import edu.wpi.first.wpilibj.AnalogInput;
-import edu.wpi.first.wpilibj.RobotController;
 
 /**
  * Generic Absolute Encoder sensor to hide actual implementation and ensure uniform values across subsystems
@@ -20,10 +17,14 @@ import edu.wpi.first.wpilibj.RobotController;
 public class AbsoluteEncoder {
     private AnalogInput encoder;
     private double offset;
+    private double min_val;
+    private double max_val;
     
-    public AbsoluteEncoder (int port, double offset){
+    public AbsoluteEncoder (int port, double offset, double min_val, double max_val){
         this.encoder = new AnalogInput(port); //Defining the encoder using the port passed in
         this.offset = offset;
+        this.min_val = min_val;
+        this.max_val = max_val;
     }
 
     /**
@@ -31,7 +32,7 @@ public class AbsoluteEncoder {
      * @return Discrete value of encoder in degrees
      */
     public double getAbsolutePositionDegrees () {
-        return encoder.getAverageVoltage()/RobotController.getVoltage5V()*360+offset;
+        return (encoder.getAverageValue()-min_val)/(max_val-min_val)*360+offset;
     }
 
     /**

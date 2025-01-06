@@ -56,7 +56,9 @@ public class RobotMap {
                     RobotMap.kFrontLeftTurningMotorPort,
                     RobotMap.kFrontLeftTurningEncoderPort,
                     DriveConstants.kFrontLeftDriveMotorReversed,
-                    ModuleConstants.kFrontLeftEncoderOffset),
+                    ModuleConstants.kFrontLeftEncoderOffset,
+                    ModuleConstants.kFrontLeftEncoderMinVal,
+                    ModuleConstants.kFrontLeftEncoderMaxVal),
             ModulePosition.FRONT_RIGHT,
             new SwerveModule(
                     ModulePosition.FRONT_RIGHT,
@@ -64,7 +66,9 @@ public class RobotMap {
                     RobotMap.kFrontRightTurningMotorPort,
                     RobotMap.kFrontRightTurningEncoderPort,
                     DriveConstants.kFrontRightDriveMotorReversed,
-                    ModuleConstants.kFrontRightEncoderOffset),
+                    ModuleConstants.kFrontRightEncoderOffset,
+                    ModuleConstants.kFrontRightEncoderMinVal,
+                    ModuleConstants.kFrontRightEncoderMaxVal),
             ModulePosition.REAR_LEFT,
             new SwerveModule(
                     ModulePosition.REAR_LEFT,
@@ -72,7 +76,9 @@ public class RobotMap {
                     RobotMap.kRearLeftTurningMotorPort,
                     RobotMap.kRearLeftTurningEncoderPort,
                     DriveConstants.kRearLeftDriveMotorReversed,
-                    ModuleConstants.kRearLeftEncoderOffset),
+                    ModuleConstants.kRearLeftEncoderOffset,
+                    ModuleConstants.kRearLeftEncoderMinVal,
+                    ModuleConstants.kRearLeftEncoderMaxVal),
             ModulePosition.REAR_RIGHT,
             new SwerveModule(
                     ModulePosition.REAR_RIGHT,
@@ -80,7 +86,9 @@ public class RobotMap {
                     RobotMap.kRearRightTurningMotorPort,
                     RobotMap.kRearRightTurningEncoderPort,
                     DriveConstants.kRearRightDriveMotorReversed,
-                    ModuleConstants.kRearRightEncoderOffset)     
+                    ModuleConstants.kRearRightEncoderOffset,
+                    ModuleConstants.kRearRightEncoderMinVal,
+                    ModuleConstants.kRearRightEncoderMaxVal)   
         )
     );
 }

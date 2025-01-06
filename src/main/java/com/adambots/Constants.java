@@ -77,6 +77,16 @@ public final class Constants {
         public static final double kFrontRightEncoderOffset = 0;
         public static final double kRearLeftEncoderOffset = 0;
         public static final double kRearRightEncoderOffset = 0;
+
+        public static final double kFrontLeftEncoderMinVal = 0; //TODO: SET THESE ENCODER OFFSETS
+        public static final double kFrontRightEncoderMinVal = 0;
+        public static final double kRearLeftEncoderMinVal = 150;
+        public static final double kRearRightEncoderMinVal = 0;
+
+        public static final double kFrontLeftEncoderMaxVal = 4000; //TODO: SET THESE ENCODER OFFSETS
+        public static final double kFrontRightEncoderMaxVal = 4000;
+        public static final double kRearLeftEncoderMaxVal = 1300;
+        public static final double kRearRightEncoderMaxVal = 4000;
     }
 
     public static final class AutoConstants {
