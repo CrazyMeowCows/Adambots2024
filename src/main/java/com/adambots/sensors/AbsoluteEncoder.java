@@ -31,7 +31,7 @@ public class AbsoluteEncoder {
      * @return Discrete value of encoder in degrees
      */
     public double getAbsolutePositionDegrees () {
-        return encoder.getAverageVoltage()/RobotController.getVoltage5V()*360;
+        return encoder.getAverageVoltage()/RobotController.getVoltage5V()*360+offset;
     }
 
     /**
