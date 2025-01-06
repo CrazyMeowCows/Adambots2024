@@ -32,8 +32,7 @@ public class Buttons {
         public static final CommandXboxController secondaryJoystick = new CommandXboxController(
                         GamepadConstants.kSecondaryDriver);
         public static final CommandJoystick ex3dPro = new CommandJoystick(RobotMap.kJoystickControllerPort);
-        public static final BooleanSupplier isJoystickConnected = () -> ex3dPro.getHID().isConnected()
-                        || RobotBase.isSimulation();
+        public static final BooleanSupplier isJoystickConnected = () -> ex3dPro.getHID().isConnected() || RobotBase.isSimulation();
 
         // primary buttons
         public static final Trigger primaryBackButton = primaryJoystick.back();

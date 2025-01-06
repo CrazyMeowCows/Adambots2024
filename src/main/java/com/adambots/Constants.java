@@ -70,7 +70,7 @@ public final class Constants {
         // Convert drive motor rotations to linear distance             Motor rot to Wheel rot -> Wheel rot to linear meters (circumference)
         public static final double kDriveEncoderPositionConversionFactor = kSwerveModuleFinalGearRatio * 2*Math.PI * kWheelRadiusMeters;
 
-        public static final double kPModuleTurningController = 0.7; //0.7 //PID Values for turning motors .7
+        public static final double kPModuleTurningController = 0.1; //0.7 //PID Values for turning motors .7
         public static final double kDModuleTurningController = 0.026; // 0.026
 
         public static final double kFrontLeftEncoderOffset = 0; //TODO: SET THESE ENCODER OFFSETS
