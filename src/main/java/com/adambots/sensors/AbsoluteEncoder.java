@@ -12,6 +12,7 @@ import com.ctre.phoenix6.hardware.CANcoder;
 import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.util.Units;
 import edu.wpi.first.wpilibj.AnalogInput;
+import edu.wpi.first.wpilibj.RobotController;
 
 /**
  * Generic Absolute Encoder sensor to hide actual implementation and ensure uniform values across subsystems
@@ -30,7 +31,7 @@ public class AbsoluteEncoder {
      * @return Discrete value of encoder in degrees
      */
     public double getAbsolutePositionDegrees () {
-        return encoder.getValue()*360+offset;
+        return encoder.getAverageVoltage()/RobotController.getVoltage5V()*360;
     }
 
     /**

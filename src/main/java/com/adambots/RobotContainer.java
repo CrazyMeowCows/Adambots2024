@@ -38,7 +38,7 @@ public class RobotContainer {
   private final DrivetrainSubsystem drivetrainSubsystem = new DrivetrainSubsystem(RobotMap.swerveModules, RobotMap.gyro);
 
   //Creates a SmartDashboard element to allow drivers to select differnt autons
-  private SendableChooser<Command> autoChooser = new SendableChooser<>();
+  // private SendableChooser<Command> autoChooser = new SendableChooser<>();
 
   /**
    * The container for the robot. Contains subsystems, OI devices, and commands.
@@ -86,7 +86,7 @@ public class RobotContainer {
     // autoChooser = AutoBuilder.buildAutoChooser();
 
     //Adds various data to the dashboard that is useful for driving and debugging
-    SmartDashboard.putData("Auton Mode", autoChooser);
+    // SmartDashboard.putData("Auton Mode", autoChooser);
 
    // Dash.add("Field", Constants.field);
 
@@ -133,7 +133,8 @@ public class RobotContainer {
    * @return the command to run in autonomous
    */
   public Command getAutonomousCommand() {
-    return autoChooser.getSelected();
+    // return autoChooser.getSelected();
+    return null;
   }
 }
 //Blahaj_Counter: 2

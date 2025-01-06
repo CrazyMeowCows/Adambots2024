@@ -73,7 +73,7 @@ public final class Constants {
         public static final double kPModuleTurningController = 0.7; //0.7 //PID Values for turning motors .7
         public static final double kDModuleTurningController = 0.026; // 0.026
 
-        public static final double kFrontLeftEncoderOffset = 0;
+        public static final double kFrontLeftEncoderOffset = 0; //TODO: SET THESE ENCODER OFFSETS
         public static final double kFrontRightEncoderOffset = 0;
         public static final double kRearLeftEncoderOffset = 0;
         public static final double kRearRightEncoderOffset = 0;
